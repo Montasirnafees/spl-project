@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>TIC TAC TOE</title>
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="stylesheet" href="project.css">
+</head>
+
+<body class="bg-[#1e1e2f] text-white">
+
+<div id="celebration" class="hidden fixed inset-0 pointer-events-none z-50"></div>
+
+<div class="min-h-screen flex flex-col justify-center items-center text-center px-3">
+
+<h1 class="title mb-6">TIC TAC TOE</h1>
+
+
+<div id="modeBox" class="flex gap-4 mb-4">
+<button class="btn btn-primary" onclick="startFriend()">With Friend</button>
+<button class="btn btn-warning" onclick="showDifficulty()">With AI</button>
+</div>
+
+<div id="difficultyBox" class="hidden mb-3">
+<button class="btn btn-success m-1" onclick="startAI('easy')">Easy</button>
+<button class="btn btn-info m-1" onclick="startAI('medium')">Medium</button>
+<button class="btn btn-danger m-1" onclick="startAI('hard')">Hard</button>
+</div>
+
+<div class="relative">
+<canvas id="winLine"></canvas>
+<div id="board" class="board hidden"></div>
+</div>
+
+<h2 id="message" class="mt-4 text-xl"></h2>
+
+<div id="newGameBox" class="hidden mt-4">
+<button class="btn btn-light" onclick="restart()">New Game</button>
+<button class="btn btn-secondary" onclick="exitGame()">Exit</button>
+</div>
+
+</div>
+
+<script src="project.js"></script>
+</body>
+</html>
